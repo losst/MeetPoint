@@ -1,0 +1,112 @@
+/* Nancy */
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    margin-top: 100px;
+    width: 180px;
+}
+
+.app-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+    width: 85vw;
+    background: url("../assets/box1.png") center center / contain no-repeat;
+}
+
+.app-name > * {
+    font-family: var(--font-heading);
+    font-size: 7vw;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 1;
+}
+
+.app-description {
+    height: 6vh;
+    font-family: var(--font-heading);
+    font-size: 1.5vw;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.login-btn {
+    text-align: center;
+    padding: 10px 10vw 10px;
+    border: 2px solid var(--border-soft);
+    border-radius: 999px;
+    background: var(--row-grad);
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.3);
+    font-family: var(--font-heading);
+    font-size: 2vw;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: var(--text-main);
+    transition: all 0.2s ease;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+    box-shadow:
+        0 0 8px rgba(255, 255, 255, 0.5),
+        0 0 15px rgba(112, 30, 125, 0.6),
+        0 0 30px rgba(163, 63, 102, 0.4);
+}
+
+@media screen and (max-width: 1000px) {
+
+    .logo {
+        margin-top: 150px;
+        width: 150px;
+    }
+
+    .app-name {
+        height: 150px;
+    }
+
+    .app-name > * {
+        font-size: 60pt;
+    }
+
+    .app-description {
+        font-size: 15pt;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .logo {
+        margin-top: 150px;
+        margin-bottom: 50px;
+        width: 120px;
+    }
+
+    .app-name {
+        height: 100px;
+        width: 500px;
+    }
+
+    .app-name > * {
+        font-size: 45pt;
+    }
+
+    .app-description {
+        font-size: 13pt;
+    }
+
+    .login-btn {
+        font-size: 15pt;
+    }
+
+}

@@ -1,0 +1,179 @@
+<!--Nancy-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Slots</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/slots_style.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    
+    <div class="slots-page">
+        <aside class="sidebar">
+            <a href="appointments.html">
+                <button class="sidebar-btn logo" title="Appointments">
+                    <img src="assets/logo.png" alt="Appointments" />
+                </button>
+            </a>
+            
+            <a href="slots_owner.html">
+                <button class="sidebar-btn" title="Home">
+                    <img src="assets/home_icon.png" alt="Home" />
+                </button>
+            </a>
+
+            <a href="notifications.html">
+                <button class="sidebar-btn" title="Messages">
+                    <img src="assets/chat_icon.png" alt="Messages" />
+                </button>
+            </a>
+
+            <a href="group_meetings.php">
+                <button class="sidebar-btn" title="Group Meetings">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                        <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                    </svg>
+                </button>
+            </a>
+
+            <div class="sidebar-slots">
+                <a>
+                    <button class="sidebar-btn active" title="Slots" onclick="toggleSlotBtns()">
+                        <img src="assets/calendar_icon.png" alt="Slots" />
+                    </button>
+                </a>
+
+                <div class="slots-btns">
+                    <button class="slots-btn active" title="Active" style="text-shadow: 0 0 8px #3399ff;">ACTIVE</button>
+                    <button class="slots-btn private" title="Private" style="text-shadow: 0 0 8px #cccccc;">PRIVATE</button>
+                    <button class="slots-btn pending" title="Pending" style="text-shadow: 0 0 8px #ffb347;">PENDING</button>
+                    <button class="slots-btn booked" title="Booked" style="text-shadow: 0 0 8px #00ffcc;">BOOKED</button>
+                </div>
+                
+            </div>
+
+            <!-- for smaller screens -->
+            <a href="javascript:void(0);" class="bar-icon" id="bar-icon" onclick="openSidebar()">
+                <!-- bootstrap svg -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                    <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+                </svg>
+            </a>
+            
+        </aside>
+
+        <main class="slots-main">
+            
+            <header class="slots-header">
+                <h1>MY SLOTS</h1>
+                <button class="logout-btn visible" type="button">
+					<img src="assets/profile.png" alt="Profile" class="profile-icon" />
+					<span>LOG OUT</span>
+				</button>
+            </header>
+            
+            <!-- Calendar, referenced Bootstrap -->
+            <section class="calendar-container">
+                <div class="calendar">
+                    <div class="year-header">
+                        <span class="left-button fa fa-chevron-left" id="prev""></span>
+                        <span class="year" id="label"></span>
+                        <span class="right-button fa fa-chevron-right" id="next"> </span>
+                    </div>
+                    <table class="months-table wide">
+                        <tbody>
+                            <tr class="months-row">
+                                <td class="month">Jan</td>
+                                <td class="month">Feb</td>
+                                <td class="month">Mar</td>
+                                <td class="month">Apr</td>
+                                <td class="month">May</td>
+                                <td class="month">Jun</td>
+                                <td class="month">Jul</td>
+                                <td class="month">Aug</td>
+                                <td class="month">Sep</td>
+                                <td class="month">Oct</td>
+                                <td class="month">Nov</td>
+                                <td class="month">Dec</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="days-table wide">
+                        <td class="day">SUN</td>
+                        <td class="day">MON</td>
+                        <td class="day">TUE</td>
+                        <td class="day">WED</td>
+                        <td class="day">THU</td>
+                        <td class="day">FRI</td>
+                        <td class="day">SAT</td>
+                    </table>
+                    <div class="frame">
+                        <table class="dates-table wide" cellspacing="0">
+                            <tbody class="tbody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="events">
+                    <div class="events-container">
+                        <!-- testing purposes -->
+                        <div class="event">
+                            <span class="event-id" style="display: none">id</span>
+                            <span class="event-status">status</span>
+                            <span class="event-time">time</span>
+                            <span class="event-user">user or group</span>
+                            <span class="event-action"><span class="positive-action">ACCEPT</span><span class="divider">|</span><span class="negative-action">DECLINE</span></span>
+                        </div>
+                        <div class="event">
+                            <span class="event-id" style="display: none">id</span>
+                            <span class="event-status">status</span>
+                            <span class="event-time">time</span>
+                            <span class="event-user">user or group</span>
+                            <span class="event-action"><span class="positive-action">MAKE PUBLIC</span><span class="divider">|</span><span class="negative-action">DELETE SLOT</span></span>
+                        </div>
+                        <div class="event">
+                            <span class="event-id" style="display: none">id</span>
+                            <span class="event-status">status</span>
+                            <span class="event-time">time</span>
+                            <span class="event-user">user or group</span>
+                            <span class="event-action">
+                                <span class="positive-action">
+                                    <a href="mailto:student@example.com">EMAIL</a>
+                                </span>
+                                <span class="divider">|</span>
+                                <span class="negative-action">DELETE SLOT</span>
+                            </span>
+                        </div>
+
+                        <div class="event">1:00 PM - 1:30 PM</div> <div class="event">3:00 PM - 3:30 PM</div> <div class="event">3:00 PM - 3:30 PM</div> <div class="event">3:00 PM - 3:30 PM</div> <div class="event">3:00 PM - 3:30 PM</div> <div class="event">3:00 PM - 3:30 PM</div> <div class="event">3:00 PM - 3:30 PM</div> <div class="event">3:00 PM - 3:30 PM</div>
+                    </div>
+                    <button class="add-event-btn">
+                        <!-- bootstrap svg -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                        </svg>
+                        NEW SLOT
+                    </button>
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/slots.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

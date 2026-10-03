@@ -1,0 +1,122 @@
+/* Nancy */
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* header */
+.header {
+    font-family: var(--font-heading);
+    font-size: 5rem;
+    letter-spacing: 1px;
+}
+
+/* login form */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-size: 1.5rem;
+}
+
+.input-container > * {
+    margin-bottom: 20px;
+    width: 400px;
+}
+
+input {
+    width: 100%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--border-soft);
+    box-shadow: 0 0 15px rgba(255,255,255,0.04);
+    border-radius: 40px;
+    padding: 10px;
+    color: var(--text-main);
+}
+
+::placeholder {
+  color: var(--text-main);
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+.password-input-box {
+    position: relative;
+}
+
+.password-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    display: grid;
+    place-items: center;
+}
+
+.password-btn:hover {
+    cursor: pointer;
+}
+
+.submit-btn {
+    border: none;
+    background: transparent;
+    color: var(--text-main);
+    padding: 10px;
+    border: 2px solid var(--border-soft);
+    border-radius: 40px;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.3);
+    background: var(--row-grad);
+    font-size: 20px;
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+
+.submit-btn:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+    box-shadow:
+        0 0 8px rgba(255, 255, 255, 0.5),
+        0 0 15px rgba(112, 30, 125, 0.6),
+        0 0 30px rgba(163, 63, 102, 0.4);
+}
+
+/* message */
+#message {
+   font-weight: 500px; 
+   text-shadow: 0 0 8px #ff4d6d;
+}
+
+/* to register */
+.register-container > a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.register-container > a:hover {
+    text-decoration: underline;
+}
+
+/* external resources */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 60px rgba(121, 22, 99, 0.6) inset!important;
+    box-shadow: 0 0 0 1000px rgba(121, 22, 99, 0.6) inset !important;
+
+    -webkit-text-fill-color: var(--text-main) !important; 
+    font-family: var(--font-body) !important;
+}

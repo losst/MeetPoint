@@ -1,0 +1,108 @@
+<!-- Irene -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Group Meeting</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="css/add_new_slot_style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/add_new_slot.js"></script>
+</head>
+
+<body>
+    <div class="slot-page">
+        <aside class="sidebar">
+            <button class="sidebar-btn logo sidebar-lock-link" type="button" title="Appointments">
+                <img src="assets/logo.png" alt="Appointments" />
+            </button>
+
+            <button class="sidebar-btn sidebar-lock-link" type="button" title="Home">
+                <img src="assets/home_icon.png" alt="Home" />
+            </button>
+
+            <button class="sidebar-btn sidebar-lock-link" type="button" title="Messages">
+                <img src="assets/chat_icon.png" alt="Messages" />
+            </button>
+
+            <button class="sidebar-btn sidebar-lock-link active" type="button" title="Group Meetings">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                </svg>
+            </button>
+
+            <button class="sidebar-btn sidebar-lock-link" type="button" title="Slots">
+                <img src="assets/calendar_icon.png" alt="Slots" />
+            </button>
+        </aside>
+
+        <div id="sidebarWarning" class="sidebar-warning" aria-live="polite">
+            Please finish or cancel this session before leaving the page.
+        </div>
+
+        <main class="slot-main">
+            <header class="slot-header">
+                <h1>CREATE GROUP MEETING</h1>
+                <button class="logout-btn" type="button">
+                    <img src="assets/profile.png" alt="Profile" class="profile-icon" />
+                    <span>LOG OUT</span>
+                </button>
+            </header>
+
+            <section class="slot-form-panel group-meeting-panel">
+                <form class="slot-form group-meeting-form">
+
+                    <div class="form-group">
+                        <label class="form-title" for="meetingTitle">MEETING TITLE</label>
+                        <input
+                            type="text"
+                            id="meetingTitle"
+                            name="meetingTitle"
+                            class="text-input long-input"
+                            placeholder="e.g. COMP 307 Team 43 demo"
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-title">INVITE STUDENTS</label>
+
+                        <div class="invite-search-row">
+                            <input
+                                type="text"
+                                class="text-input long-input"
+                                placeholder="Search by name or McGill email"
+                            />
+                            <button type="button" class="mini-action-btn">ADD</button>
+                        </div>
+
+                        <div class="invite-pill-list">
+                            <div class="invite-pill">
+                                <span>irene@mail.mcgill.ca</span>
+                                <button type="button" class="pill-remove-btn">×</button>
+                            </div>
+                            <div class="invite-pill">
+                                <span>emily@mail.mcgill.ca</span>
+                                <button type="button" class="pill-remove-btn">×</button>
+                            </div>
+                            <div class="invite-pill">
+                                <span>nancy@mail.mcgill.ca</span>
+                                <button type="button" class="pill-remove-btn">×</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slot-actions">
+                        <button type="submit" class="slot-action-btn">INVITE</button>
+                        <a href="group_meetings.html" class="slot-action-btn">CANCEL</a>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <div class="right-pinkbar" aria-hidden="true"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

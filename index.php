@@ -1,0 +1,39 @@
+
+<?php // Nancy
+
+session_start();
+
+// session exists
+if (isset($_SESSION['user_id'], $_SESSION['role'])) { 
+    header("Location: appointments.php"); // to be modified
+    exit();
+}
+
+?>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MeetPoint</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index_style.css">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+</head>
+
+<body>
+    <div class="container">
+        <img class="logo" src="assets/logo_dark.png" alt="[logo here]">
+        
+        <div class="app-name">
+            <h1>MEETPOINT</h1>
+        </div>
+        
+        <h2 class="app-description">SCHEDULE SMARTER, MEET EASIER.</h2>
+        <a class="login-btn" href="login.php">LOG IN</a>
+
+</body>
+
+</html>

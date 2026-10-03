@@ -1,0 +1,98 @@
+<!-- Emily -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Notifications</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/notifications_style.css">
+</head>
+
+<body>
+<div class="notifications-page">
+
+    <!-- side bar-->
+    <aside class="sidebar">
+        <a href="appointments.html">
+            <button class="sidebar-btn logo" title="Appointments">
+                <img src="assets/logo.png" alt="Appointments" />
+            </button>
+        </a>
+
+        <a href="slots_owner.html">
+            <button class="sidebar-btn" title="Home">
+                <img src="assets/home_icon.png" alt="Home" />
+            </button>
+        </a>
+
+        <a href="notifications.html">
+            <button class="sidebar-btn active" title="Notifications">
+                <img src="assets/chat_icon.png" alt="notifications" />
+            </button>
+        </a>
+
+        <a href="group_meetings.html">
+            <button class="sidebar-btn" title="Group Meetings">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                </svg>
+            </button>
+        </a>
+
+        <!-- <?php if ($role === 'owner'): ?> -->
+            <a href="slots.html">
+                <button class="sidebar-btn" title="Slots">
+                    <img src="assets/calendar_icon.png" alt="Slots" />
+                </button>
+            </a>
+        <!-- <?php endif; ?> -->
+
+        <!-- for smaller screens -->
+        <a href="javascript:void(0);" class="bar-icon" id="bar-icon" onclick="openSidebar()">
+            <!-- bootstrap svg -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+            </svg>
+        </a>
+    </aside>
+
+    <!-- main container-->
+    <div class="notifications-main">
+
+        <!-- main header -->
+        <header class="notifications-header">
+            <h1>NOTIFICATIONS</h1>
+            <button class="logout-btn" type="button">
+				<img src="assets/profile.png" alt="Profile" class="profile-icon" />
+				<span>LOG OUT</span>
+			</button>
+        </header>
+
+        <!-- Notification 1 -->
+        <div class="notification-card">
+            YOUR REQUEST FOR MEETING WITH [NAME] @ [DATE & TIME] HAS BEEN SENT!
+            <div class="timestamp">TIMESTAMP</div>
+        </div>
+
+        <!-- Notification 2 -->
+        <div class="card card-row">
+            <div>
+                [NAME] HAS REQUESTED FOR A MEETING @ [DATE & TIME]
+                <div class="timestamp">TIMESTAMP</div>
+            </div>
+
+            <div class="actions">
+                <div class="btn accept">ACCEPT</div>
+                <div class="btn decline">DECLINE</div>
+            </div>
+        </div>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

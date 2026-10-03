@@ -1,0 +1,166 @@
+<!-- Irene -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add New Slot</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link rel="stylesheet" href="css/add_new_slot_style.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/add_new_slot.js"></script>
+</head>
+
+<body>
+    <div class="slot-page">
+        <aside class="sidebar">
+			<button class="sidebar-btn logo sidebar-lock-link" type="button" title="Appointments">
+				<img src="assets/logo.png" alt="Appointments" />
+			</button>
+
+			<button class="sidebar-btn sidebar-lock-link" type="button" title="Home">
+				<img src="assets/home_icon.png" alt="Home" />
+			</button>
+
+			<button class="sidebar-btn sidebar-lock-link" type="button" title="Messages">
+				<img src="assets/chat_icon.png" alt="Messages" />
+			</button>
+			
+			<button class="sidebar-btn sidebar-lock-link" title="Group Meetings">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+					<path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+				</svg>
+			</button>
+
+			<button class="sidebar-btn sidebar-lock-link" title="Slots">
+				<img src="assets/calendar_icon.png" alt="Slots" />
+			</button>
+		</aside>
+
+	<div id="sidebarWarning" class="sidebar-warning" aria-live="polite">
+		Please finish or cancel this session before leaving the page.
+	</div>
+
+        <main class="slot-main">
+            <header class="slot-header">
+                <h1>ADD NEW SLOT</h1>
+				<!-- silverwolf i luv u :P -->
+                <button class="logout-btn" type="button">
+					<img src="assets/profile.png" alt="Profile" class="profile-icon" />
+					<span>LOG OUT</span>
+				</button>
+            </header>
+
+            <section class="slot-form-panel">
+                <form class="slot-form">
+
+                    <div class="form-group">
+                        <label class="form-title">DAYS OF WEEK</label>
+                        <div class="day-selector">
+                            <label class="day-pill">
+                                <input type="checkbox" name="days[]" value="mon">
+                                <span>MON</span>
+                            </label>
+                            <label class="day-pill">
+                                <input type="checkbox" name="days[]" value="mon">
+                                <span>TUES</span>
+                            </label>
+                            <label class="day-pill">
+                                <input type="checkbox" name="days[]" value="mon">
+                                <span>WED</span>
+                            </label>
+                            <label class="day-pill">
+                                <input type="checkbox" name="days[]" value="mon">
+                                <span>THU</span>
+                            </label>
+                            <label class="day-pill">
+                                <input type="checkbox" name="days[]" value="mon">
+                                <span>FRI</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+						<label class="form-title">TIME</label>
+						<div class="time-range-row">
+						<!-- we set the time rage 8am - 6pm -->
+							<div class="time-field">
+								<label class="mini-label" for="startTime">START TIME</label>
+								<select id="startTime" name="startTime" class="time-select" required>
+									<option value="">Select time</option>
+									<option value="08:00">8:00 AM</option>
+									<option value="08:30">8:30 AM</option>
+									<option value="09:00">9:00 AM</option>
+									<option value="09:30">9:30 AM</option>
+									<option value="10:00">10:00 AM</option>
+									<option value="10:30">10:30 AM</option>
+									<option value="11:00">11:00 AM</option>
+									<option value="11:30">11:30 AM</option>
+									<option value="12:00">12:00 PM</option>
+									<option value="12:30">12:30 PM</option>
+									<option value="13:00">1:00 PM</option>
+									<option value="13:30">1:30 PM</option>
+									<option value="14:00">2:00 PM</option>
+									<option value="14:30">2:30 PM</option>
+									<option value="15:00">3:00 PM</option>
+									<option value="15:30">3:30 PM</option>
+									<option value="16:00">4:00 PM</option>
+									<option value="16:30">4:30 PM</option>
+									<option value="17:00">5:00 PM</option>
+									<option value="17:30">5:30 PM</option>
+								</select>
+							</div>
+							<div class="time-field">
+								<label class="mini-label" for="endTime">END TIME</label>
+								<select id="endTime" name="endTime" class="time-select" required>
+									<option value="">Select time</option>
+									<option value="08:30">8:30 AM</option>
+									<option value="09:00">9:00 AM</option>
+									<option value="09:30">9:30 AM</option>
+									<option value="10:00">10:00 AM</option>
+									<option value="10:30">10:30 AM</option>
+									<option value="11:00">11:00 AM</option>
+									<option value="11:30">11:30 AM</option>
+									<option value="12:00">12:00 PM</option>
+									<option value="12:30">12:30 PM</option>
+									<option value="13:00">1:00 PM</option>
+									<option value="13:30">1:30 PM</option>
+									<option value="14:00">2:00 PM</option>
+									<option value="14:30">2:30 PM</option>
+									<option value="15:00">3:00 PM</option>
+									<option value="15:30">3:30 PM</option>
+									<option value="16:00">4:00 PM</option>
+									<option value="16:30">4:30 PM</option>
+									<option value="17:00">5:00 PM</option>
+									<option value="17:30">5:30 PM</option>
+									<option value="18:00">6:00 PM</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+                    <div class="form-group">
+                        <label class="form-title" for="repeatWeeks">REPEAT FOR</label>
+                        <div class="input-row repeat-row">
+                            <input type="number" id="repeatWeeks" name="repeatWeeks" min="1" max="16" value="8" class="time-input small-input">
+                            <span class="inline-label">WEEKS</span>
+                        </div>
+                    </div>
+
+                    <div class="slot-actions">
+						<button type="submit" class="slot-action-btn">SAVE</button>
+						<a href="slots.html" class="slot-action-btn">CANCEL</a>
+					</div>
+
+                </form>
+            </section>
+        </main>
+
+        <div class="right-pinkbar" aria-hidden="true"></div>
+    </div>
+	
+    <script src="js/script.js"></script>
+	
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!--Irene-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Appointments</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/appointments_style.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="appointments-page">
+        <aside class="sidebar">
+            <a href="appointments.html">
+				<button class="sidebar-btn logo active" title="Appointments">
+					<img src="assets/logo.png" alt="Appointments" />
+				</button>
+			</a>
+
+            <a href="slots_owner.html">
+				<button class="sidebar-btn" title="Home">
+					<img src="assets/home_icon.png" alt="Home" />
+				</button>
+			</a>
+
+            <a href="notifications.html">
+                <button class="sidebar-btn" title="Messages">
+                    <img src="assets/chat_icon.png" alt="Messages" />
+                </button>
+            </a>
+
+			<a href="group_meetings.html">
+				<button class="sidebar-btn" title="Group Meetings">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+						<path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+					</svg>
+				</button>
+			</a>
+
+			<!-- <?php if ($role === 'owner'): ?> -->
+				<a href="slots.html">
+					<button class="sidebar-btn" title="Slots">
+						<img src="assets/calendar_icon.png" alt="Slots" />
+					</button>
+				</a>
+			<!-- <?php endif; ?> -->
+
+			<!-- for smaller screens -->
+			<a href="javascript:void(0);" class="bar-icon" id="bar-icon" onclick="openSidebar()">
+				<!-- bootstrap svg -->
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+					<path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+				</svg>
+			</a>
+        </aside>
+
+        <main class="appointments-main">
+            <header class="appointments-header">
+                <h1>MY APPOINTMENTS</h1>
+                <button class="logout-btn" type="button">
+					<img src="assets/profile.png" alt="Profile" class="profile-icon" />
+					<span>LOG OUT</span>
+				</button>
+            </header>
+
+            <section class="appointments-hero">
+                <div class="filter-row">
+					<label class="filter-label" for="eventFilter">
+						<img src="assets/filter.png" alt="Filter" />
+						<span>FILTER</span>
+					</label>
+
+					<select class="event-filter" id="eventFilter">
+						<option value="all">All Appointments</option>
+						<option value="today">Today</option>
+						<option value="week">This Week</option>
+						<option value="month">This Month</option>
+					</select>
+				</div>
+				<section class = "appointments-content">
+
+					<div class="appointment-list">
+						<div class="appointment-card" data-type="meeting">
+							<div class="appointment-owner">OWNER</div>
+							<div class="appointment-datetime">DATE &amp; TIME</div>
+
+							<div class="appointment-actions">
+								<button class="icon-btn" type="button">
+									<img src="assets/mailto_icon.png" alt="Email" />
+								</button>
+								<button class="icon-btn" type="button">
+									<img src="assets/cancel_icon.png" alt="Cancel" />
+								</button>
+							</div>
+						</div>
+
+						<div class="appointment-card" data-type="interview">
+							<div class="appointment-owner">OWNER</div>
+							<div class="appointment-datetime">DATE &amp; TIME</div>
+
+							<div class="appointment-actions">
+								<button class="icon-btn" type="button">
+									<img src="assets/mailto_icon.png" alt="Email" />
+								</button>
+								<button class="icon-btn" type="button">
+									<img src="assets/cancel_icon.png" alt="Cancel" />
+								</button>
+							</div>
+						</div>
+
+						<div class="appointment-card" data-type="advising">
+							<div class="appointment-owner">OWNER</div>
+							<div class="appointment-datetime">DATE &amp; TIME</div>
+
+							<div class="appointment-actions">
+								<button class="icon-btn" type="button">
+									<img src="assets/mailto_icon.png" alt="Email" />
+								</button>
+								<button class="icon-btn" type="button">
+									<img src="assets/cancel_icon.png" alt="Cancel" />
+								</button>
+							</div>
+						</div>
+
+						<div class="appointment-card" data-type="meeting">
+							<div class="appointment-owner">OWNER</div>
+							<div class="appointment-datetime">DATE &amp; TIME</div>
+
+							<div class="appointment-actions">
+								<button class="icon-btn" type="button">
+									<img src="assets/mailto_icon.png" alt="Email" />
+								</button>
+								<button class="icon-btn" type="button">
+									<img src="assets/cancel_icon.png" alt="Cancel" />
+								</button>
+							</div>
+						</div>
+						
+						<div class="appointment-card" data-type="meeting">
+							<div class="appointment-owner">OWNER</div>
+							<div class="appointment-datetime">DATE &amp; TIME</div>
+
+							<div class="appointment-actions">
+								<button class="icon-btn" type="button">
+									<img src="assets/mailto_icon.png" alt="Email" />
+								</button>
+								<button class="icon-btn" type="button">
+									<img src="assets/cancel_icon.png" alt="Cancel" />
+								</button>
+							</div>
+						</div>
+					</div>
+
+				</section>
+				<div class = "appointments-footer">
+					<a href="slots_owner.html" class="add-booking-btn">
+						<img src="assets/add_icon.png" alt="Add booking" class="add-icon" />
+						<span>ADD BOOKING</span>
+					</a>
+				</div>
+			</section>
+        </main>
+		
+		<div class="right-pinkbar" aria-hidden="true"></div>
+    </div>
+
+	<script src="js/script.js"></script>
+	
+</body>
+
+</html>
